@@ -1,0 +1,39 @@
+/* Give the three letter-side snapshots more breathing room. */
+.letter-photo-scatter{height:142px;margin-top:27px;max-width:336px}
+.letter-photo-scatter img{width:110px;height:103px}
+.letter-photo-scatter img:nth-child(1){left:0;top:18px}
+.letter-photo-scatter img:nth-child(2){left:112px;top:0}
+.letter-photo-scatter img:nth-child(3){left:224px;top:16px}
+
+/* Cutout PNGs form a loose frame around the gift, with a clear center for the box. */
+.gift-sticker-cloud{position:absolute;z-index:1;left:50%;top:48%;transform:translateX(-50%);width:min(100%,980px);height:230px;pointer-events:none}
+.gift-sticker{position:absolute;display:block;object-fit:contain;filter:drop-shadow(0 5px 5px #65524720);animation:sticker-float 6s ease-in-out infinite}
+.sticker-lips{left:calc(50% - 345px);top:16px;width:93px;height:74px;transform:rotate(-8deg)}
+.sticker-teddy{left:calc(50% - 210px);top:112px;width:78px;height:91px;animation-delay:-1.1s}
+.sticker-roses{left:calc(50% - 380px);top:102px;width:72px;height:86px;transform:rotate(-6deg);animation-delay:-2s}
+.sticker-balloons{left:calc(50% + 208px);top:2px;width:72px;height:145px;transform:rotate(5deg);animation-delay:-1.7s}
+.sticker-hamster{left:calc(50% + 120px);top:126px;width:72px;height:78px;transform:rotate(6deg);animation-delay:-2.5s}
+.sticker-19{left:calc(50% - 295px);bottom:0;width:76px;height:72px;transform:rotate(-8deg);animation-delay:-.6s}
+.sticker-banner{left:calc(50% + 285px);top:13px;width:125px;height:68px;transform:rotate(5deg);animation-delay:-2.2s}
+.sticker-bow{left:calc(50% - 190px);top:10px;width:65px;height:72px;transform:rotate(9deg);animation-delay:-.9s}
+.sticker-cat{left:calc(50% + 205px);bottom:0;width:76px;height:70px;transform:rotate(-7deg);animation-delay:-1.4s}
+@keyframes sticker-float{0%,100%{translate:0 0}50%{translate:0 -6px}}
+@media(min-width:761px) and (max-width:800px){.sticker-banner{left:calc(50% + 265px);width:110px;height:60px}}
+@media(max-width:760px){
+  .letter-photo-scatter{height:124px;margin-top:21px;max-width:290px}
+  .letter-photo-scatter img{width:88px;height:84px}
+  .letter-photo-scatter img:nth-child(1){left:0;top:17px}
+  .letter-photo-scatter img:nth-child(2){left:90px;top:0}
+  .letter-photo-scatter img:nth-child(3){left:180px;top:15px}
+  .gift-sticker-cloud{top:49%;height:220px}
+  .sticker-lips{left:2%;top:10px;width:52px;height:42px}
+  .sticker-teddy{left:5%;top:117px;width:48px;height:57px}
+  .sticker-roses{left:17%;top:59px;width:43px;height:54px}
+  .sticker-balloons{left:auto;right:2%;top:0;width:43px;height:89px}
+  .sticker-hamster{left:auto;right:15%;top:108px;width:45px;height:50px}
+  .sticker-19{left:0;bottom:0;width:51px;height:47px}
+  .sticker-banner{left:auto;right:1%;top:86px;width:66px;height:37px}
+  .sticker-bow{left:22%;top:177px;width:40px;height:45px}
+  .sticker-cat{left:auto;right:1%;bottom:-3px;width:49px;height:46px}
+}
+@media(prefers-reduced-motion:reduce){.gift-sticker{animation:none!important}}

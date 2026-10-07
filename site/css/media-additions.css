@@ -1,0 +1,30 @@
+/* Camera-view trim and small clip stickers */
+.video-card{position:relative}
+.video-window{position:relative;border:1px solid #d7cbc2;box-shadow:0 7px 20px #51412e10,inset 0 0 0 3px #fff8}
+.video-window video{border:1px solid #fff9}
+.video-window:before{content:'';position:absolute;inset:5px;z-index:1;pointer-events:none;background:linear-gradient(#fff9,#fff9) left top/15px 1px no-repeat,linear-gradient(#fff9,#fff9) left top/1px 15px no-repeat,linear-gradient(#fff9,#fff9) right top/15px 1px no-repeat,linear-gradient(#fff9,#fff9) right top/1px 15px no-repeat,linear-gradient(#fff9,#fff9) left bottom/15px 1px no-repeat,linear-gradient(#fff9,#fff9) left bottom/1px 15px no-repeat,linear-gradient(#fff9,#fff9) right bottom/15px 1px no-repeat,linear-gradient(#fff9,#fff9) right bottom/1px 15px no-repeat}
+.camera-hud{position:absolute;right:16px;top:17px;z-index:2;display:flex;align-items:center;gap:5px;padding:5px 6px;background:#24231c91;color:#fff;font:700 7px/1 var(--sans);letter-spacing:.11em;pointer-events:none}
+.camera-hud i{width:5px;height:5px;border-radius:50%;background:#ed9692;box-shadow:0 0 5px #ed9692}.camera-hud b{font-weight:500;opacity:.8;margin-left:3px}
+.video-stickers{position:absolute;right:-7px;top:17%;z-index:3;display:grid;gap:7px;pointer-events:none}
+.video-stickers span{display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#fffaf0;border:1px solid #e4d9cd;box-shadow:0 3px 9px #4d41331c;color:#b98987;font:15px/1 var(--serif);transform:rotate(8deg)}
+.video-card:nth-child(even) .video-stickers span{background:#f8f5ff;color:#9588b1}.video-card:nth-child(3) .video-stickers span{background:#fbf5dc;color:#a48a59}
+/* New snapshots sit below the letter heading, beside the editable note. */
+.letter-photo-scatter{height:113px;position:relative;margin-top:24px;max-width:275px}
+.letter-photo-scatter img{position:absolute;width:83px;height:76px;object-fit:cover;padding:4px;background:#fffdf8;box-shadow:0 8px 18px #4d41331b}
+.letter-photo-scatter img:nth-child(1){left:2px;top:15px;transform:rotate(-7deg);object-position:center}
+.letter-photo-scatter img:nth-child(2){left:89px;top:1px;transform:rotate(4deg);object-position:center}
+.letter-photo-scatter img:nth-child(3){left:177px;top:14px;transform:rotate(-2deg);object-position:center 43%}
+/* Soft celebratory details around the existing gift box. */
+.gift-display{position:relative;z-index:2;width:180px;height:156px;margin-top:27px}
+.gift-display .gift-button{margin:0}
+.gift-decoration{position:absolute;z-index:4;pointer-events:none;color:#bd9a67;animation:gift-twinkle 3.8s ease-in-out infinite}
+.gift-star-one{left:-31px;top:39px;font-size:19px}
+.gift-star-two{right:-28px;top:57px;font-size:23px;color:#bf8d99;animation-delay:-1.4s}
+.gift-ribbon-doodle{left:-38px;bottom:14px;font-size:25px;transform:rotate(-30deg);color:#bd9292;animation:gift-sway 4s ease-in-out infinite}
+.gift-confetti{right:-33px;bottom:19px;font-size:17px;color:#9f92bd;animation-delay:-.8s}
+.gift-reveal>p{margin-top:15px}
+@keyframes gift-twinkle{0%,100%{opacity:.57;scale:.94}50%{opacity:1;scale:1.08}}
+@keyframes gift-sway{0%,100%{rotate:-7deg;translate:0 0}50%{rotate:9deg;translate:2px -4px}}
+@media(max-width:760px){.letter-photo-scatter{height:92px;margin-top:19px;max-width:260px}.letter-photo-scatter img{width:72px;height:67px}.letter-photo-scatter img:nth-child(2){left:76px}.letter-photo-scatter img:nth-child(3){left:150px}.video-stickers{right:-4px;top:15%}.gift-star-one{left:-23px}.gift-star-two{right:-22px}.gift-ribbon-doodle{left:-26px}.gift-confetti{right:-26px}}
+@media(max-width:560px){.letter-photo-scatter{grid-column:1/-1;width:250px;margin-left:0}.video-stickers span{width:22px;height:22px;font-size:13px}.camera-hud{font-size:6px;right:13px;top:14px}.gift-decoration{font-size:16px}.gift-star-one{left:-18px}.gift-star-two{right:-17px}.gift-ribbon-doodle{left:-20px}.gift-confetti{right:-20px}}
+@media(prefers-reduced-motion:reduce){.gift-decoration{animation:none!important}}
